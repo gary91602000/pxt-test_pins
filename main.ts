@@ -30,8 +30,8 @@ namespace test_pins {
     //% tpins.fieldEditor="gridpicker"
     //% tpins.fieldOptions.columns=3
     //% inlineInputMode=inline
-    export function digital_readpin(tpins: DigitalPin): void {
-        pins.digitalReadPin(tpins: DigitalPin): number
+    export function digital_readpin(tpins: DigitalPin): number {
+        return pins.digitalReadPin(tpins: DigitalPin)
     }
 	
 
