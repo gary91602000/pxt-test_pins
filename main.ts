@@ -34,7 +34,7 @@ namespace test_pins {
 	//% value.defl=0
 	//% value.min=0
 	//% value.max=1	
-	export function digitalWritePin(led: DigitalPin, value: number): void {
+	export function digital_writepin(led: DigitalPin, value: number): void {
         pins.digitalWritePin(led, value)
     }
 	
