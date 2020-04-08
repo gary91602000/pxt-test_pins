@@ -31,7 +31,7 @@ namespace test_pins {
     //% tpins.fieldOptions.columns=3
     //% inlineInputMode=inline
     export function digital_readpin(tpins: DigitalPin): number {
-        return pins.digitalReadPin(tpins: DigitalPin)
+        return pins.digitalReadPin(tpins)
     }
 	
 
