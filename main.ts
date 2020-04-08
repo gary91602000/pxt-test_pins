@@ -5,20 +5,60 @@
  * block = " "之後的內容是在定義積木的完整樣貌
  */
  
-//% block="test_music" color="#AA278D" 
+//% block="test_pins" color="#AA278D" 
 //block積木群組名稱,color積木顏色
-namespace test_music {
+namespace test_pins {
 
     // note that Caml casing yields lower case
     // block text with spaces
 
     //% weight=20
-    //% blockId=playtone 
-    //% block="playtone|%value|for|%tbeat"
-    //% tbeat.shadow="timePicker"
-    //% value.defl=262
-	//% tbeat.defl=1
-    export function playtone(value: Note, tbeat: BeatFraction): void {
-        music.playTone(value, music.beat(tbeat.Whole))
-    }		
+    //% blockId=digital_writepin 
+    //% block="digital output|%tpins|value|%value"
+    //% tpins.fieldEditor="gridpicker" 
+    //% tpins.fieldOptions.columns=3 
+    //% value.defl=0
+    //% value.min=0
+    //% value.max=1	
+    export function digital_writepin(tpins: DigitalPin, value: number): void {
+        pins.digitalWritePin(tpins, value)
+    }
+
+    //% weight=20
+    //% blockId=digital_readpin
+    //% block="digital read pin|%tpins"
+    //% tpins.fieldEditor="gridpicker"
+    //% tpins.fieldOptions.columns=3
+    //% inlineInputMode=inline
+    export function digital_readpin(tpins: DigitalPin): number {
+        return pins.digitalReadPin(tpins);
+    }
+
+    //% weight=20
+    //% blockId=analog_writepin 
+    //% block="analog output|%tpins|value|%value"
+    //% tpins.fieldEditor="gridpicker" 
+    //% tpins.fieldOptions.columns=3 
+    //% value.defl=1023
+    //% value.min=0
+    //% value.max=1023
+    export function analog_writepin(tpins: AnalogPin, value: number): void {
+        pins.analogWritePin(tpins, value)
+    }
+	
+    //% weight=20
+    //% blockId=analog_readpin
+    //% block="analog read pin|%tpins"
+    //% tpins.fieldEditor="gridpicker"
+    //% tpins.fieldOptions.columns=3
+    //% inlineInputMode=inline
+    export function analog_readpin(tpins: AnalogPin): number {
+        return pins.analogReadPin(tpins);
+    }	
+	
+
+	
+	
+	
+	
 }
