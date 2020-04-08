@@ -14,11 +14,11 @@ namespace test_music {
 
     //% weight=20
     //% blockId=playtone 
-    //% block="playtone|%value|for|%beat"
-    //% beat.shadow="timePicker"
+    //% block="playtone|%value|for|%tbeat"
+    //% tbeat.shadow="timePicker"
     //% value.defl=262
-    //% beat.defl=1
-    export function playtone(value: Note, beat: BeatFraction ): void {
-        music.beat(BeatFraction.Whole)
+	//% tbeat.defl=1
+    export function playtone(value: Note, tbeat: BeatFraction): void {
+        music.playTone(value, music.beat(tbeat.Whole))
     }		
 }
