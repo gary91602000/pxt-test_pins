@@ -33,7 +33,6 @@ namespace test_pins {
     export function digital_readpin(tpins: DigitalPin): number {
         return pins.digitalReadPin(tpins)
     }
-	
 
     //% weight=20
     //% blockId=analog_writepin 
