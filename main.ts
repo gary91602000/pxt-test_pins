@@ -46,6 +46,15 @@ namespace test_pins {
         pins.analogWritePin(tpins, value)
     }
 	
+    //% weight=20
+    //% blockId=analog_readpin
+    //% block="analog read pin|%tpins"
+    //% tpins.fieldEditor="gridpicker"
+    //% tpins.fieldOptions.columns=3
+    //% inlineInputMode=inline
+    export function analog_readpin(tpins: AnalogPin): number {
+        return pins.analogReadPin(tpins);
+    }	
 	
 
 	
