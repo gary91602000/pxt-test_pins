@@ -24,7 +24,13 @@ namespace test_pins {
         pins.digitalWritePin(tpins, value)
     }
 
-
+    //% weight=20
+    //% blockId=digital_readpin
+    //% block="digital read pin|%tpins"
+    //% tpins.fieldEditor="gridpicker"
+    //% tpins.fieldOptions.columns=3
+    export function digital_readpin(tpins: DigitalPin): number 
+	
 
     //% weight=20
     //% blockId=analog_writepin 
