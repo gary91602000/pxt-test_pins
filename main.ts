@@ -19,8 +19,7 @@ namespace test_pins {
 	//% led.fieldOptions.columns=3 
 	//% value.defl=1023
 	//% value.min=0
-	//% value.max=1023	
-	
+	//% value.max=1023
     export function analog_writepin(led: AnalogPin, value: number): void {
         pins.analogWritePin(led, value)
     }
