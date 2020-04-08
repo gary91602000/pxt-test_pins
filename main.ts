@@ -24,4 +24,18 @@ namespace test_pins {
     export function analog_writepin(led: AnalogPin, value: number): void {
         pins.analogWritePin(led, value)
     }
+	
+	
+	//% weight=20
+    //% blockId=digital_writepin 
+	//% block="digital output|%led|value|%value"
+    //% led.fieldEditor="gridpicker" 
+	//% led.fieldOptions.columns=3 
+	//% value.defl=0
+	//% value.min=0
+	//% value.max=1	
+	export function digitalWritePin(led: DigitalPin, value: number): void {
+        pins.digitalWritePin(led, value)
+    }
+	
 }
