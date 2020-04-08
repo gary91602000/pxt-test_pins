@@ -26,7 +26,7 @@ namespace test_pins {
 
     //% weight=20
     //% blockId=digital_readpin
-    //% block="digital read pin|%tpins"
+    //% block="digital read pin|$tpins"
     //% tpins.fieldEditor="gridpicker"
     //% tpins.fieldOptions.columns=3
     //% inlineInputMode=inline
