@@ -29,7 +29,9 @@ namespace test_pins {
     //% block="digital read pin|%tpins"
     //% tpins.fieldEditor="gridpicker"
     //% tpins.fieldOptions.columns=3
-    export function digital_readpin(tpins: DigitalPin): number 
+    export function digital_readpin(tpins: DigitalPin): void {
+        pins.digitalReadPin(tpins: DigitalPin): number
+    }
 	
 
     //% weight=20
