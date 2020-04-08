@@ -13,28 +13,35 @@ namespace test_pins {
     // block text with spaces
 
     //% weight=20
-    //% blockId=analog_writepin 
-    //% block="analog output|%led|value|%value"
-    //% led.fieldEditor="gridpicker" 
-    //% led.fieldOptions.columns=3 
-    //% value.defl=1023
-    //% value.min=0
-    //% value.max=1023
-    export function analog_writepin(led: AnalogPin, value: number): void {
-        pins.analogWritePin(led, value)
-    }
-	
-	
-    //% weight=20
     //% blockId=digital_writepin 
-    //% block="digital output|%led|value|%value"
-    //% led.fieldEditor="gridpicker" 
-    //% led.fieldOptions.columns=3 
+    //% block="digital output|%tpins|value|%value"
+    //% tpins.fieldEditor="gridpicker" 
+    //% tpins.fieldOptions.columns=3 
     //% value.defl=0
     //% value.min=0
     //% value.max=1	
-    export function digital_writepin(led: DigitalPin, value: number): void {
-        pins.digitalWritePin(led, value)
+    export function digital_writepin(tpins: DigitalPin, value: number): void {
+        pins.digitalWritePin(tpins, value)
     }
+
+
+
+    //% weight=20
+    //% blockId=analog_writepin 
+    //% block="analog output|%tpins|value|%value"
+    //% tpins.fieldEditor="gridpicker" 
+    //% tpins.fieldOptions.columns=3 
+    //% value.defl=1023
+    //% value.min=0
+    //% value.max=1023
+    export function analog_writepin(tpins: AnalogPin, value: number): void {
+        pins.analogWritePin(tpins, value)
+    }
+	
+	
+
+	
+	
+	
 	
 }
