@@ -14,51 +14,47 @@ namespace test_pins {
 
     //% weight=20
     //% blockId=digital_writepin 
-    //% block="digital output|%tpins|value|%value"
-    //% tpins.fieldEditor="gridpicker" 
-    //% tpins.fieldOptions.columns=3 
-    //% value.defl=0
-    //% value.min=0
-    //% value.max=1	
-    export function digital_writepin(tpins: DigitalPin, value: number): void {
-        pins.digitalWritePin(tpins, value)
+    //% block="digital write pin |%tname| to |%tvalue"
+    //% tname.fieldEditor="gridpicker" 
+    //% tname.fieldOptions.columns=3 
+    //% tvalue.defl=0
+    //% tvalue.min=0
+    //% tvalue.max=1	
+    export function digital_writepin(tname: DigitalPin, tvalue: number): void {
+        pins.digitalWritePin(tname, tvalue)
     }
 
     //% weight=20
     //% blockId=digital_readpin
-    //% block="digital read pin|%tpins"
-    //% tpins.fieldEditor="gridpicker"
-    //% tpins.fieldOptions.columns=3
+    //% block="digital read pin|%tname"
+    //% tname.fieldEditor="gridpicker"
+    //% tname.fieldOptions.columns=3
     //% inlineInputMode=inline
-    export function digital_readpin(tpins: DigitalPin): number {
-        return pins.digitalReadPin(tpins);
+    export function digital_readpin(tname: DigitalPin): number {
+        return pins.digitalReadPin(tname);
     }
 
     //% weight=20
     //% blockId=analog_writepin 
-    //% block="analog output|%tpins|value|%value"
-    //% tpins.fieldEditor="gridpicker" 
-    //% tpins.fieldOptions.columns=3 
-    //% value.defl=1023
-    //% value.min=0
-    //% value.max=1023
-    export function analog_writepin(tpins: AnalogPin, value: number): void {
-        pins.analogWritePin(tpins, value)
+    //% block="analog write pin |%tname| to |%tvalue"
+    //% tname.fieldEditor="gridpicker" 
+    //% tname.fieldOptions.columns=3 
+    //% tvalue.defl=1023
+    //% tvalue.min=0
+    //% tvalue.max=1023
+    export function analog_writepin(tname: AnalogPin, tvalue: number): void {
+        pins.analogWritePin(tname, tvalue)
     }
 	
     //% weight=20
     //% blockId=analog_readpin
-    //% block="analog read pin|%tpins"
-    //% tpins.fieldEditor="gridpicker"
-    //% tpins.fieldOptions.columns=3
+    //% block="analog read pin|%tname"
+    //% tname.fieldEditor="gridpicker"
+    //% tname.fieldOptions.columns=3
     //% inlineInputMode=inline
-    export function analog_readpin(tpins: AnalogPin): number {
-        return pins.analogReadPin(tpins);
+    export function analog_readpin(tname: AnalogPin): number {
+        return pins.analogReadPin(tname);
     }	
 	
 
-	
-	
-	
-	
 }
